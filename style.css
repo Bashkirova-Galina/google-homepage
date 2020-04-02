@@ -1,0 +1,100 @@
+
+.main {
+  
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+ 
+}
+		.left{
+		float: left; /* Выравнивание по левому краю */
+		margin: 1em 0 1em 1em; /* Отступы */
+		}
+		
+form{
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 1;
+   grid-row-end: 1;
+   
+}		
+		
+.sidebar{
+ grid-column-start: 2;
+ grid-column-end: 3;
+ grid-row-start: 1;
+ grid-row-end: 1;
+}
+
+.footer-nav {
+   
+   grid-column-start: 2;
+   grid-column-end: 3;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   
+}
+
+
+
+
+input { 
+    border: 1px solid black;    /* обводка */
+    border-radius: 20px 20px 20px 20px; /*Закругляем уголки*/
+    width:650px;
+    height:35px;
+   }
+
+
+
+.container {
+  display: grid;
+  
+  /* Определяем размер и число колонок сетки. */
+	grid-template-columns: 20% 1fr;
+    grid-template-rows: 5fr 1fr;
+     
+}
+
+ li {
+color:grey;
+float: left;
+} 
+
+.header-nav ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 5em; 
+  padding-left: 0px; /*левый отступ*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+ 
+  
+}
+ a {
+text-decoration: none; /*убираем подчеркивание текста ссылок*/
+padding: 8px;
+}
+
+.footer-nav ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+  padding-left: 0px; /*левый отступ*/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left:0px;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    /* Выравнивание областей сетки для мобильного макета */
+    grid-template-areas: 
+      "main main"
+      "form form"
+      "sidebar sidebar"
+      "footer footer";
+  }
+}
